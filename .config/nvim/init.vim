@@ -37,14 +37,21 @@ runtime! plugin/sensible.vim
 set termguicolors	" enable 24-bit RGB color
 set background=dark
 
-let ayucolor="dark"   " possible options: light, mirage, dark
+let ayucolor="dark"     " possible options: light, mirage, dark
 colorscheme ayu
 
+if exists("g:neovide")
+    set guifont=Fira\ Code:h15
+endif
+
 " GENERAL OPTIONS
-set number            " Show line numbers
+set number              " Show line numbers
+set tabstop=2           " a tab is two spaces
+set shiftwidth=2        " an autoindent (with <<) is two spaces
+set expandtab           " use spaces, not tabs
 
 " keyboard shortcuts
-let mapleader=","     " Set my leader key to ','
+let mapleader=","       " Set my leader key to ','
 imap jj <Esc>			" jj acts as ESC key
 imap kk <Esc>			" kk acts as ESC key
 
