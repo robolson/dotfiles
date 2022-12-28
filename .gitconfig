@@ -1,0 +1,42 @@
+[include]
+	# User name & email is sourced from another file to make it easy
+	# to share this config in a public git repo
+	path = ~/.gitconfig_user
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	re = rebase
+	st = status -s
+	cp = cherry-pick
+	wc = whatchanged
+	last = log -1 HEAD
+	# cb (current branch)
+	cb = rev-parse --abbrev-ref HEAD
+	reauthor = commit --amend --reset-author -C HEAD
+	lastauthor = log -1 --format='%Cgreen%an <%ae>'
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit
+	unstage = 'reset HEAD --'
+	ship = push origin HEAD
+
+[pager]
+	branch = false
+[branch]
+    	autosetuprebase = always
+[push]
+    	default = upstream
+[rebase]
+    	autosquash = true
+[help]
+        autocorrect = 10
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	excludesFile = ~/.gitignore_global
+	# do not invoke the pager if the output can fit on 1 screen
+	pager = less -F
+[diff]
+	wsErrorHighlight = all
