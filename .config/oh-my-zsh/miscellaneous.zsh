@@ -15,6 +15,10 @@ fi
 # 1 second delay to give webcam time to warm up
 export LOLCOMMITS_DELAY=1
 
+# Increase max size of history file
+HISTSIZE=1000000
+SAVEHIST=1000000
+
 # Add $HOME/bin to path
 PATH="$HOME/bin:$PATH"
 

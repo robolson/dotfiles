@@ -35,8 +35,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+# Set DISABLE_MAGIC_FUNCTIONS to true if pasting URLs and other text is messed up.
+# This will automatically escape special characters when pasting URLs. I prefer
+# to not use this functionality and manually place URLs in double quotes
+# instead of escaping.
+DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
